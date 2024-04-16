@@ -35,7 +35,6 @@ def get_nearest_node(tree, point):
     return nearest_node
 
 def move_node_2_node(from_node, to_node, max_distance):
-
         distance = node_2_node_distance(from_node, to_node)
         if distance <= max_distance:
              return to_node
@@ -53,7 +52,6 @@ def rewire_tree(tree, new_node, max_distance, obstacles, obstacle_radius):
                     node.parent = new_node.cost = new_node.cost + node_2_node_distance(new_node, node)
 
 def rrt_star(start, goal, x_range, y_range, obstacles, max_iter=1000, max_distance=0.4, obstacle_radius=0.2):
-
     tree=[start]
     start.cost = 0
     x_max = max(x_range)
